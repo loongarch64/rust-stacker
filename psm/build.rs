@@ -42,6 +42,7 @@ fn find_assembly(
         ("powerpc64", "little", _, _) => Some(("src/arch/powerpc64_openpower.s", true)),
         ("powerpc64", _, _, _) => Some(("src/arch/powerpc64.s", true)),
         ("s390x", _, _, _) => Some(("src/arch/zseries_linux.s", true)),
+        ("loongarch64", _, _, _) => Some(("src/arch/loongarch64.s", true)),
         ("mips", _, _, _) => Some(("src/arch/mips_eabi.s", true)),
         ("mips64", _, _, _) => Some(("src/arch/mips64_eabi.s", true)),
         ("sparc64", _, _, _) => Some(("src/arch/sparc64.s", true)),
@@ -49,7 +50,6 @@ fn find_assembly(
         ("riscv32", _, _, _) => Some(("src/arch/riscv.s", true)),
         ("riscv64", _, _, _) => Some(("src/arch/riscv64.s", true)),
         ("wasm32", _, _, _) => Some(("src/arch/wasm32.o", true)),
-        ("loongarch64", _, _, _) => Some(("src/arch/loongarch64.s", true)),
         _ => None,
     }
 }
